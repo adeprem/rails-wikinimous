@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <title>RailsWikinimous</title>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Open+Sans" rel="stylesheet">
+
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +15,7 @@
 
 <body>
 <% if current_user %>
-  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout'%>
 <% else %>
   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 <% end %>
