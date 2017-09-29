@@ -1,5 +1,6 @@
-<h4><%= @article.title%></h4>
-<p><%= @article.content %></p>
+<%= kramdown('##' + @article.title)%>
+<%= kramdown('---')%>
+<%= @article.content %>
 <br>
 <br>
 <%= link_to "Edit", edit_article_path(@article) %>

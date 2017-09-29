@@ -1,7 +1,28 @@
 <%= form_for(@article) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-    <%= f.label :content %>
-  <%= f.text_field :content %>
-  <%= f.submit %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.hidden_field :content, :value => :content %>
+<%= f.submit %>
+<%= @editor %>
 <% end %>
+
+
+
+<div id="editor">some text</div>
+<script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/chrome");
+  editor.setValue("Enter your content here")
+  editor.resize()
+
+
+
+  editor.getSession().on('change', function(e) {
+    editor.getValue()
+    document.getElementById("article_content").value = editor.getValue()
+  });
+
+</script>
+

@@ -13,3 +13,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require ace-rails-ap
+//= require ace/theme-chrome
+//= require ace/mode-javascript
