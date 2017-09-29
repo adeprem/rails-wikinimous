@@ -1,6 +1,7 @@
 <%= kramdown('##' + @article.title)%>
 <%= kramdown('---')%>
 <p><%= @article.content %><p>
+
 <br>
 <br>
 <%= link_to "Edit", edit_article_path(@article) %> /
