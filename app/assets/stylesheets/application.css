@@ -18,10 +18,13 @@ body {
   overflow: hidden;
 }
 #editor {
-  margin: 50px;
+  margin-top: 85px;
+  margin-left: 20px;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  height: 200px;
+  width: 500px;
 }
