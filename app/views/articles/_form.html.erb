@@ -4,23 +4,19 @@
 
 <%= f.hidden_field :content, :value => :content %>
 <%= f.submit %>
-<%= @editor %>
 <% end %>
 
 
-
-<div id="editor">some text</div>
+<div id="editor"></div>
 <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
   var editor = ace.edit("editor");
   editor.setTheme("ace/theme/chrome");
-  editor.setValue("Enter your content here")
+  editor.setValue('<%= @article.content %>')
   editor.resize()
 
 
-
   editor.getSession().on('change', function(e) {
-    editor.getValue()
     document.getElementById("article_content").value = editor.getValue()
   });
 
